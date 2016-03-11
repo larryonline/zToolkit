@@ -17,23 +17,24 @@
  */
 @interface NSDate(zToolkit_NSDate_Time)
 
--(instancetype)zt_dateWith_hh:(NSInteger)hour
-                           MM:(NSInteger)minute
-                           ss:(NSInteger)second;
+-(instancetype)zt_dateWithHour:(NSInteger)hour
+                        minute:(NSInteger)minute
+                        second:(NSInteger)second;
 
--(instancetype)zt_dateWith00_00_00;
--(instancetype)zt_dateWith23_59_59;
+-(instancetype)zt_dateWithFirstSecond;
+-(instancetype)zt_dateWithLastSecond;
 
 @end
+
 
 /**
  * instantiation category
  */
 @interface NSDate(zToolkit_Instantiation)
 
-+(instancetype)zt_dateWith_yyyy:(NSInteger)year
-                             mm:(NSInteger)month
-                             dd:(NSInteger)date;
++(instancetype)zt_dateWithYear:(NSUInteger)year
+                         month:(NSUInteger)month
+                        date:(NSUInteger)date;
 
 @end
 

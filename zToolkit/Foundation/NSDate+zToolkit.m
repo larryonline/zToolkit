@@ -14,23 +14,26 @@
 
 @implementation NSDate(zToolkit_NSDate_Time)
 
--(instancetype)zt_dateWith_hh:(NSInteger)hour MM:(NSInteger)minute ss:(NSInteger)second{
+-(instancetype)zt_dateWithHour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second{
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [calendar components:NSUIntegerMax fromDate:self];
     components.hour = hour;
     components.minute = minute;
     components.second = second;
+    components.nanosecond = 0;
     
-    NSTimeInterval ts = [[calendar dateFromComponents:components] timeIntervalSince1970];
-    return [NSDate dateWithTimeIntervalSince1970:ts];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[[calendar dateFromComponents:components] timeIntervalSince1970]] ;
+    return date;
+    
+    
 }
 
--(instancetype)zt_dateWith00_00_00{
-    return [self zt_dateWith_hh:0 MM:0 ss:0];
+-(instancetype)zt_dateWithFirstSecond{
+    return [self zt_dateWithHour:0 minute:0 second:0];
 }
 
--(instancetype)zt_dateWith23_59_59{
-    return [self zt_dateWith_hh:23 MM:59 ss:59];
+-(instancetype)zt_dateWithLastSecond{
+    return [self zt_dateWithHour:23 minute:59 second:59];
 }
 
 @end
@@ -38,15 +41,12 @@
 
 @implementation NSDate(zToolkit_Instantiation)
 
-+(instancetype)zt_dateWith_yyyy:(NSInteger)year mm:(NSInteger)month dd:(NSInteger)date{
++(instancetype)zt_dateWithYear:(NSUInteger)year month:(NSUInteger)month date:(NSUInteger)date{
     
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:NSUIntegerMax fromDate:[[NSDate alloc] init]];
-    components.year = year;
-    components.month = month;
-    components.day = date;
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"y/M/d"];
     
-    return [calendar dateFromComponents:components];
+    return [df dateFromString:[NSString stringWithFormat:@"%ld/%ld/%ld", year, month, date]];
 }
 
 @end
