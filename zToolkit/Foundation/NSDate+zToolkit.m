@@ -36,6 +36,19 @@
     return [self zt_dateWithHour:23 minute:59 second:59];
 }
 
+
+-(instancetype)zt_daysAgo:(NSInteger)daysOfPast{
+    return [self dateByAddingTimeInterval: 60 * 60 * 24 * -daysOfPast];
+}
+
+-(instancetype)zt_yesterday{
+    return [self zt_daysAgo:1];
+}
+
+-(instancetype)zt_tomorrow{
+    return [self zt_daysAgo:-1];
+}
+
 @end
 
 

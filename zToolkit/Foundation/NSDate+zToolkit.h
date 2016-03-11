@@ -24,6 +24,10 @@
 -(instancetype)zt_dateWithFirstSecond;
 -(instancetype)zt_dateWithLastSecond;
 
+-(instancetype)zt_yesterday;
+-(instancetype)zt_tomorrow;
+-(instancetype)zt_daysAgo:(NSInteger)daysOfPast;
+
 @end
 
 
@@ -34,7 +38,7 @@
 
 +(instancetype)zt_dateWithYear:(NSUInteger)year
                          month:(NSUInteger)month
-                        date:(NSUInteger)date;
+                          date:(NSUInteger)date;
 
 @end
 

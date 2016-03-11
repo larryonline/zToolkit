@@ -64,6 +64,20 @@
     compare = [df stringFromDate:date];
     NSAssert([@"59" isEqualToString:compare], @"%@", date);
     
+    NSDate *date2 = nil;
+    
+    date2 = [date zt_yesterday];
+    [df setDateFormat:@"d"];
+    NSAssert([[df stringFromDate:date] integerValue] - [[df stringFromDate:date2] integerValue] == 1, @"%@", date2);
+    
+    date2 = [date zt_tomorrow];
+    [df setDateFormat:@"d"];
+    NSAssert([[df stringFromDate:date] integerValue] - [[df stringFromDate:date2] integerValue] == -1, @"%@", date2);
+    
+    date2 = [date zt_daysAgo:10];
+    [df setDateFormat:@"d"];
+    NSAssert([[df stringFromDate:date] integerValue] - [[df stringFromDate:date2] integerValue] == 10, @"%@", date2);
+    
 }
 
 -(void)testPrettyLooking{
