@@ -28,15 +28,15 @@
 
 /* Begin PBXFileReference section */
 		46EB98551C92AD6E00E47C86 /* zToolkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zToolkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		46EB98591C92AD6E00E47C86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		46EB985B1C92AD6E00E47C86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		46EB985C1C92AD6E00E47C86 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		46EB985E1C92AD6E00E47C86 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		46EB985F1C92AD6E00E47C86 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		46EB98591C92AD6E00E47C86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../zToolkitDemo/main.m; sourceTree = "<group>"; };
+		46EB985B1C92AD6E00E47C86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../zToolkitDemo/AppDelegate.h; sourceTree = "<group>"; };
+		46EB985C1C92AD6E00E47C86 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../zToolkitDemo/AppDelegate.m; sourceTree = "<group>"; };
+		46EB985E1C92AD6E00E47C86 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../zToolkitDemo/ViewController.h; sourceTree = "<group>"; };
+		46EB985F1C92AD6E00E47C86 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../zToolkitDemo/ViewController.m; sourceTree = "<group>"; };
 		46EB98621C92AD6E00E47C86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		46EB98641C92AD6E00E47C86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46EB98641C92AD6E00E47C86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../zToolkitDemo/Assets.xcassets; sourceTree = "<group>"; };
 		46EB98671C92AD6E00E47C86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		46EB98691C92AD6E00E47C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46EB98691C92AD6E00E47C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../zToolkitDemo/Info.plist; sourceTree = "<group>"; };
 		46EB986E1C92AD6E00E47C86 /* zToolkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zToolkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46EB98721C92AD6E00E47C86 /* zToolkitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zToolkitTests.m; sourceTree = "<group>"; };
 		46EB98741C92AD6E00E47C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		46EB984C1C92AD6E00E47C86 = {
 			isa = PBXGroup;
 			children = (
-				46EB98571C92AD6E00E47C86 /* zToolkit */,
+				46EB98571C92AD6E00E47C86 /* zToolkitDemo */,
 				46EB98711C92AD6E00E47C86 /* zToolkitTests */,
 				46EB98561C92AD6E00E47C86 /* Products */,
 			);
@@ -78,7 +78,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		46EB98571C92AD6E00E47C86 /* zToolkit */ = {
+		46EB98571C92AD6E00E47C86 /* zToolkitDemo */ = {
 			isa = PBXGroup;
 			children = (
 				46EB985B1C92AD6E00E47C86 /* AppDelegate.h */,
@@ -91,6 +91,7 @@
 				46EB98691C92AD6E00E47C86 /* Info.plist */,
 				46EB98581C92AD6E00E47C86 /* Supporting Files */,
 			);
+			name = zToolkitDemo;
 			path = zToolkit;
 			sourceTree = "<group>";
 		};
@@ -242,6 +243,7 @@
 				46EB98621C92AD6E00E47C86 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../zToolkitDemo;
 			sourceTree = "<group>";
 		};
 		46EB98661C92AD6E00E47C86 /* LaunchScreen.storyboard */ = {
@@ -250,6 +252,7 @@
 				46EB98671C92AD6E00E47C86 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ../zToolkitDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -341,7 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = zToolkit/Info.plist;
+				INFOPLIST_FILE = zToolkitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhennan.zToolkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,7 +355,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = zToolkit/Info.plist;
+				INFOPLIST_FILE = zToolkitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhennan.zToolkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
