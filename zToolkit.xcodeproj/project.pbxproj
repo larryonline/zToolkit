@@ -14,6 +14,9 @@
 		46EB98651C92AD6E00E47C86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46EB98641C92AD6E00E47C86 /* Assets.xcassets */; };
 		46EB98681C92AD6E00E47C86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46EB98661C92AD6E00E47C86 /* LaunchScreen.storyboard */; };
 		46EB98731C92AD6E00E47C86 /* zToolkitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB98721C92AD6E00E47C86 /* zToolkitTests.m */; };
+		46EB98811C92AEAA00E47C86 /* NSDate+zToolkit.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB98801C92AEAA00E47C86 /* NSDate+zToolkit.m */; };
+		46EB98831C92B39600E47C86 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 46EB98821C92B39600E47C86 /* README.md */; };
+		46EB98851C92B41000E47C86 /* zToolkit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 46EB98841C92B41000E47C86 /* zToolkit.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,10 @@
 		46EB986E1C92AD6E00E47C86 /* zToolkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zToolkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46EB98721C92AD6E00E47C86 /* zToolkitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zToolkitTests.m; sourceTree = "<group>"; };
 		46EB98741C92AD6E00E47C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46EB987F1C92AEAA00E47C86 /* NSDate+zToolkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+zToolkit.h"; path = "zToolkit/Foundation/NSDate+zToolkit.h"; sourceTree = "<group>"; };
+		46EB98801C92AEAA00E47C86 /* NSDate+zToolkit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+zToolkit.m"; path = "zToolkit/Foundation/NSDate+zToolkit.m"; sourceTree = "<group>"; };
+		46EB98821C92B39600E47C86 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		46EB98841C92B41000E47C86 /* zToolkit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zToolkit.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +70,12 @@
 		46EB984C1C92AD6E00E47C86 = {
 			isa = PBXGroup;
 			children = (
+				46EB987D1C92AE6500E47C86 /* zToolkit */,
 				46EB98571C92AD6E00E47C86 /* zToolkitDemo */,
 				46EB98711C92AD6E00E47C86 /* zToolkitTests */,
 				46EB98561C92AD6E00E47C86 /* Products */,
+				46EB98821C92B39600E47C86 /* README.md */,
+				46EB98841C92B41000E47C86 /* zToolkit.podspec */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +120,23 @@
 				46EB98741C92AD6E00E47C86 /* Info.plist */,
 			);
 			path = zToolkitTests;
+			sourceTree = "<group>";
+		};
+		46EB987D1C92AE6500E47C86 /* zToolkit */ = {
+			isa = PBXGroup;
+			children = (
+				46EB987E1C92AE7B00E47C86 /* Foundation */,
+			);
+			name = zToolkit;
+			sourceTree = "<group>";
+		};
+		46EB987E1C92AE7B00E47C86 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				46EB987F1C92AEAA00E47C86 /* NSDate+zToolkit.h */,
+				46EB98801C92AEAA00E47C86 /* NSDate+zToolkit.m */,
+			);
+			name = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46EB98851C92B41000E47C86 /* zToolkit.podspec in Resources */,
 				46EB98681C92AD6E00E47C86 /* LaunchScreen.storyboard in Resources */,
 				46EB98651C92AD6E00E47C86 /* Assets.xcassets in Resources */,
 				46EB98631C92AD6E00E47C86 /* Main.storyboard in Resources */,
@@ -214,6 +242,8 @@
 			files = (
 				46EB98601C92AD6E00E47C86 /* ViewController.m in Sources */,
 				46EB985D1C92AD6E00E47C86 /* AppDelegate.m in Sources */,
+				46EB98831C92B39600E47C86 /* README.md in Sources */,
+				46EB98811C92AEAA00E47C86 /* NSDate+zToolkit.m in Sources */,
 				46EB985A1C92AD6E00E47C86 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
