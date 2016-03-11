@@ -77,7 +77,20 @@
     date2 = [date zt_daysAgo:10];
     [df setDateFormat:@"d"];
     NSAssert([[df stringFromDate:date] integerValue] - [[df stringFromDate:date2] integerValue] == 10, @"%@", date2);
+
     
+    date2 = [date zt_lastYear];
+    [df setDateFormat:@"y"];
+    NSAssert([[df stringFromDate:date] integerValue] - [[df stringFromDate:date2] integerValue] == 1, @"%@", date2);
+    
+    date2 = [date zt_nextYear];
+    [df setDateFormat:@"y"];
+    NSAssert([[df stringFromDate:date] integerValue] - [[df stringFromDate:date2] integerValue] == -1, @"%@", date2);
+    
+    date2 = [date zt_yearsAgo:10];
+    [df setDateFormat:@"y"];
+    NSAssert([[df stringFromDate:date] integerValue] - [[df stringFromDate:date2] integerValue] == 10, @"%@", date2);
+
 }
 
 -(void)testPrettyLooking{

@@ -24,9 +24,15 @@
 -(instancetype)zt_dateWithFirstSecond;
 -(instancetype)zt_dateWithLastSecond;
 
+// days
+-(instancetype)zt_daysAgo:(NSInteger)daysOfPast;
 -(instancetype)zt_yesterday;
 -(instancetype)zt_tomorrow;
--(instancetype)zt_daysAgo:(NSInteger)daysOfPast;
+
+// years
+-(instancetype)zt_yearsAgo:(NSInteger)yearsOfPast;
+-(instancetype)zt_lastYear;
+-(instancetype)zt_nextYear;
 
 @end
 

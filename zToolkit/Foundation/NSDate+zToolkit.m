@@ -36,6 +36,7 @@
     return [self zt_dateWithHour:23 minute:59 second:59];
 }
 
+// days
 
 -(instancetype)zt_daysAgo:(NSInteger)daysOfPast{
     return [self dateByAddingTimeInterval: 60 * 60 * 24 * -daysOfPast];
@@ -47,6 +48,25 @@
 
 -(instancetype)zt_tomorrow{
     return [self zt_daysAgo:-1];
+}
+
+// years
+
+-(instancetype)zt_yearsAgo:(NSInteger)yearsOfPast{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSUIntegerMax fromDate:self];
+    components.yearForWeekOfYear -= yearsOfPast;
+    
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[[calendar dateFromComponents:components] timeIntervalSince1970]] ;
+    return date;
+}
+
+-(instancetype)zt_lastYear{
+    return [self zt_yearsAgo:1];
+}
+
+-(instancetype)zt_nextYear{
+    return [self zt_yearsAgo:-1];
 }
 
 @end
