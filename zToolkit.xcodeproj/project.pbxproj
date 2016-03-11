@@ -117,8 +117,8 @@
 		46EB98711C92AD6E00E47C86 /* zToolkitTests */ = {
 			isa = PBXGroup;
 			children = (
-				46EB98721C92AD6E00E47C86 /* zToolkitTests.m */,
 				46EB98741C92AD6E00E47C86 /* Info.plist */,
+				46EB98721C92AD6E00E47C86 /* zToolkitTests.m */,
 				46F9462F1C92BD6B00D78194 /* zToolkitNSDateTests.m */,
 			);
 			path = zToolkitTests;
